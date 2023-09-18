@@ -45,7 +45,7 @@ We will also create two columns called `Adjusted_Budget` and `Adjusted_Profit` w
 
 We examine the overall trend of budget versus profit to see if there's any correlation.
 
-![BudgetVProfit](visuals/BudgetVProfit.png)
+![BudgetVProfit](BudgetVProfit.png)
 
 We also take a look at the top 25 movies in terms of profit to understand their financial success and how closely we should attempt to emulate their budget. We can see in the graph below there are a few outliers so the median will end up being more useful in determining our final budget.
 
