@@ -75,11 +75,11 @@ We start by converting the dates from the `imdb_budgets_df` dataframe to a datet
 
 When grouping by month, we can select the `Net Profit` and `Profit Margin` columns so that we can see which months have the most financial success.
 
-![MarginByMonth](visuals/MarginByMonth.png)
+![MarginByMonth](MarginByMonth.png)
 
 Finally we plot the net profit by month for a small selection of genres.  We can see that there is a general trend amongst these genres for the profit in each month.
 
-![ProfitbyMonthbyGenre](visuals/ProfitbyMonthbyGenre.png)
+![ProfitbyMonthbyGenre](ProfitbyMonthbyGenre.png)
 
 **Question 3 Conclusion:** We recommend that Our Company release the bulk of their movies, especially Animation, during the summer months (i.e. May-July). Adventure, Drama and Comedy movies would see similar success if released in November, but the recommendation remains to focus on summer.
 
@@ -102,9 +102,9 @@ actor_total['VAR'] = (actor_total['Net Profit']/actor_total['Net Profit'].mean()
 ```
 We follow the same process with directors, except we filter by using 5 or more movies instead of 10.
 
-![VARActor](visuals/VARActor.png)
+![VARActor](VARActor.png)
 
-![VARDirector](visuals/VARDirector.png)
+![VARDirector](VARDirector.png)
 
 
 **Question 4 Conclusion:** We recommend that Our Company focus their cast and crew search to individuals who consistently score at least 1.0 on the VAR score. We can, with a high level of confidence, conclude that these individuals will elevate the overall production.
@@ -114,11 +114,11 @@ We follow the same process with directors, except we filter by using 5 or more m
 In this analysis we will join the `imdb_budgets_df` and `awards_df` dataframes so that we explore correlations between budgets and Oscar wins. We first look at a distribution of the budget for movies that have been Oscar-nominated.  We also look at the win rates for the nominated movies so that we can establish the minimum number of nominations required to secure at least one win. For this analysis the minimum number or nominations 
 required was three.
 
-![Oscar_Nominated](visuals/Oscar_Nominated.png)
+![Oscar_Nominated](Oscar_Nominated.png)
 
 We use three nominations as the cutoff to filter our data and then look at the distribution of budgets again. We use the median as our measure of central tendency due to a large standard deviation in the data.
 
-![3_Nominations](visuals/3_Nominations.png)
+![3_Nominations](3_Nominations.png)
 
 **Question 5 Conclusion:** Our Company should spend at least $35,465,000 in order to make an Oscar-winning movie.
 
@@ -128,7 +128,7 @@ To answer this question we will only focus on the 4 ratings: G, PG, PG-13, and R
 
 It's also important to see the net profits of each rating by genre. We first do a `groupby` on rating and genre and then create a pivot table so that we can see the net profits of each rating in each genre.  This will guide us as to what ratings should be targeted based on the genre of the movie being made.
 
-![ProfitbyGenrebyRating](visuals/ProfitbyGenrebyRating.png)
+![ProfitbyGenrebyRating](ProfitbyGenrebyRating.png)
 
 **Question 6 Conclusion:** We recommend that Microsoft take into consideration the rating of the movie based on the genre and target audience. If making animation movies, it is wise to stick to a G or PG rating, otherwise PG-13 is the sweetspot. In terms of runtime, there is little correlation in terms of overall profitability.
 
@@ -138,7 +138,7 @@ This analysis will require the use of the `studiobudgets_df dataframe`.  We firs
 We only select the top 25 studios as we are concerned with both being financial successful as well as being recognized as one of the major studios in the industry.
 
 
-![NetProfitStudio](visuals/NetProfitStudio.png)
+![NetProfitStudio](NetProfitStudio.png)
 
 **Question 7 Conclusion:** Our Company should aim for a profit margin of 66% and a net profit of slightly over 50 million per movie to compete with the top existing studios.
 
@@ -146,12 +146,12 @@ We only select the top 25 studios as we are concerned with both being financial 
 
 We take the `theaters_df` dataframe and a column called `dollars_per_theater` to see what the average domestic gross per theater is for a movie.  We then `groupby` by studio so that we can compare each studio.
 
-![DomesticPerTheater](visuals/DomesticPerTheater.png)
+![DomesticPerTheater](DomesticPerTheater.png)
 
 
 We also investigate the correlation between the average maximum number of theaters and average domestic gross per studio.
 
-![TheatersVGross](visuals/TheatersVGross.png)
+![TheatersVGross](TheatersVGross.png)
 
 We perform a join between the `theaters_df` and `awards_df` dataframes to further explore this question.
 ```
