@@ -49,7 +49,7 @@ We examine the overall trend of budget versus profit to see if there's any corre
 
 We also take a look at the top 25 movies in terms of profit to understand their financial success and how closely we should attempt to emulate their budget. We can see in the graph below there are a few outliers so the median will end up being more useful in determining our final budget.
 
-![ProfitBudgetTop25](visuals/ProfitBudgetTop25.png)
+![ProfitBudgetTop25](ProfitBudgetTop25.png)
 
 **Question 1 Conclusion:** Our Company should budget \$82,250,000 for a movie and that budget should correlate with a profit margin of 80\%.
 
@@ -61,9 +61,9 @@ m_by_genre = genre_budgets_df.groupby('Genre', as_index=False)['Movie'].count().
 ```
 Using the same `groupby` method, we select the median net profit and profit margin for each genre. We use the median in this case as the mean is likely skewed by outliers. Outliers could either be movies with enormous profits or movies having negative profit.
 
-![NetProfitGenre.png](visuals/NetProfitGenre.png)
+![NetProfitGenre.png](NetProfitGenre.png)
 
-![ProfitMarginGenre](visuals/ProfitMarginGenre.png)
+![ProfitMarginGenre](ProfitMarginGenre.png)
 
 Lastly, we look at the percent of net profit by genre. This informs us as to how Our Company should allocate their movie budget to various films.
 
